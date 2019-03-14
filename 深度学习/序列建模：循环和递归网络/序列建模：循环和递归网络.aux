@@ -1,0 +1,52 @@
+\relax 
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\contentsline {section}{\numberline {1}展开计算图}{2}{section.1}}
+\newlabel{e10.1}{{1}{2}{展开计算图\relax }{equation.1.1}{}}
+\newlabel{e10.3}{{2}{2}{展开计算图\relax }{equation.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 将经典的动态系统展示为展开的计算图。每一个节点表示在某个时刻$t$的状态，并且函数$f$将$t$处的状态映射到$t+1$处的状态。所有时间步都使用相同的参数\relax }}{2}{figure.caption.1}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{f10.1}{{1}{2}{将经典的动态系统展示为展开的计算图。每一个节点表示在某个时刻$t$的状态，并且函数$f$将$t$处的状态映射到$t+1$处的状态。所有时间步都使用相同的参数\relax \relax }{figure.caption.1}{}}
+\newlabel{e10.4}{{3}{2}{展开计算图\relax }{equation.1.3}{}}
+\newlabel{e10.5}{{4}{2}{展开计算图\relax }{equation.1.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 没有输出的循环网络。此循环网络只处理来自输入$x$的信息，将其合并到经过时间向前传播的状态$h$。（左）回路原理图。黑色方块表示单个时间步的延迟。（右）同一网络被视为展开的计算图，其中每个节点现在与一个特定的时间实例相关联\relax }}{3}{figure.caption.2}}
+\newlabel{f10.2}{{2}{3}{没有输出的循环网络。此循环网络只处理来自输入$x$的信息，将其合并到经过时间向前传播的状态$h$。（左）回路原理图。黑色方块表示单个时间步的延迟。（右）同一网络被视为展开的计算图，其中每个节点现在与一个特定的时间实例相关联\relax \relax }{figure.caption.2}{}}
+\newlabel{f10.7}{{5}{3}{展开计算图\relax }{equation.1.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}循环神经网络}{3}{section.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 计算循环网络训练损失的计算图。损失$L$衡量每个$o$与相应的训练目标$y$的距离。当使用softmax输出时，我们假设$o$是未归一化的对数概率。损失$L$内部计算$\mathaccentV {hat}65E{y}=softmax(o)$，并将其与目标$y$比较。RNN输入到隐藏的连接由权重矩阵$U$参数化，隐藏到隐藏的循环连接由权重矩阵$W$参数化，以及隐藏到输出的连接由权重矩阵$V$参数化。式子\ref  {e10.8}定义了该模型的前向传播。（左）使用循环连接绘制的RNN及其损失。（右）同一个网络被视为展开的计算图，每一个节点现在与特定的时间实例相关联\relax }}{4}{figure.caption.3}}
+\newlabel{f10.3}{{3}{4}{计算循环网络训练损失的计算图。损失$L$衡量每个$o$与相应的训练目标$y$的距离。当使用softmax输出时，我们假设$o$是未归一化的对数概率。损失$L$内部计算$\hat {y}=softmax(o)$，并将其与目标$y$比较。RNN输入到隐藏的连接由权重矩阵$U$参数化，隐藏到隐藏的循环连接由权重矩阵$W$参数化，以及隐藏到输出的连接由权重矩阵$V$参数化。式子\ref {e10.8}定义了该模型的前向传播。（左）使用循环连接绘制的RNN及其损失。（右）同一个网络被视为展开的计算图，每一个节点现在与特定的时间实例相关联\relax \relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 此类RNN的唯一循环是从输出层到隐藏层的反馈连接。在每个时间步$t$，输入为$x_t$，隐藏层激活为$h^{(t)}$，输出为$o^{(t)}$，目标为$y^{(t)}$，损失为$L^{(t)}$。（左）回路原理图。（右）展开的计算图。这样的RNN没有图\ref  {f10.3}表示的RNN那样强大（只能表示更小的函数集合）。图\ref  {f10.3}中的RNN可以选择将想要的关于过去的任何信息放入隐藏表示$h$中并且将$h$传播到未来。该图中的RNN被训练为将特定输出值放入$o$中，并且$o$是允许传播到未来的唯一信息。此处没有从$h$前向传播的直接连接。之前的$h$仅仅通过产生的预测间接的连接到当前。$o$通常缺乏过去的重要信息，除非它非常高维。这使得该图中的RNN不那么强大，但是它更容易训练，因为每一个时间步可以与其他时间步分离训练，允许训练期间更多的并行化\relax }}{5}{figure.caption.4}}
+\newlabel{f10.4}{{4}{5}{此类RNN的唯一循环是从输出层到隐藏层的反馈连接。在每个时间步$t$，输入为$x_t$，隐藏层激活为$h^{(t)}$，输出为$o^{(t)}$，目标为$y^{(t)}$，损失为$L^{(t)}$。（左）回路原理图。（右）展开的计算图。这样的RNN没有图\ref {f10.3}表示的RNN那样强大（只能表示更小的函数集合）。图\ref {f10.3}中的RNN可以选择将想要的关于过去的任何信息放入隐藏表示$h$中并且将$h$传播到未来。该图中的RNN被训练为将特定输出值放入$o$中，并且$o$是允许传播到未来的唯一信息。此处没有从$h$前向传播的直接连接。之前的$h$仅仅通过产生的预测间接的连接到当前。$o$通常缺乏过去的重要信息，除非它非常高维。这使得该图中的RNN不那么强大，但是它更容易训练，因为每一个时间步可以与其他时间步分离训练，允许训练期间更多的并行化\relax \relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 关于时间展开的循环神经网络，在序列结束时具有单个输出，这样的网络可以用于概括序列并产生用于进一步处理的固定大小的表示。在结束处可能存在目标，或者通过更下流模块的反向传播来获得输出$o^{(t)}$上的梯度\relax }}{6}{figure.caption.5}}
+\newlabel{f10.5}{{5}{6}{关于时间展开的循环神经网络，在序列结束时具有单个输出，这样的网络可以用于概括序列并产生用于进一步处理的固定大小的表示。在结束处可能存在目标，或者通过更下流模块的反向传播来获得输出$o^{(t)}$上的梯度\relax \relax }{figure.caption.5}{}}
+\newlabel{e10.8}{{6}{6}{循环神经网络\relax }{equation.2.6}{}}
+\newlabel{e10.12}{{7}{6}{循环神经网络\relax }{equation.2.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}导师驱动过程和输出循环网络}{7}{subsection.2.1}}
+\newlabel{e10.15}{{8}{7}{导师驱动过程和输出循环网络\relax }{equation.2.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}计算循环神经网络的梯度}{7}{subsection.2.2}}
+\newlabel{e10.17}{{9}{7}{计算循环神经网络的梯度\relax }{equation.2.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces 导师驱动过程的示意图。导师驱动过程是一种训练技术，适用于输出与下一时间步的隐藏状态存在连接的RNN。（左）训练时，我们将训练集正确的输出$y^{(t)}$反馈到$h^{(t+1)}$。（右）当模型部署后，真正的输出通常是未知的。在这种情况下，我们用模型的输出$o^{t}$来近似正确的输出$y^{(t)}$，并反馈回模型\relax }}{8}{figure.caption.6}}
+\newlabel{f10.6}{{6}{8}{导师驱动过程的示意图。导师驱动过程是一种训练技术，适用于输出与下一时间步的隐藏状态存在连接的RNN。（左）训练时，我们将训练集正确的输出$y^{(t)}$反馈到$h^{(t+1)}$。（右）当模型部署后，真正的输出通常是未知的。在这种情况下，我们用模型的输出$o^{t}$来近似正确的输出$y^{(t)}$，并反馈回模型\relax \relax }{figure.caption.6}{}}
+\newlabel{e10.18}{{10}{8}{计算循环神经网络的梯度\relax }{equation.2.10}{}}
+\newlabel{e10.19}{{11}{8}{计算循环神经网络的梯度\relax }{equation.2.11}{}}
+\newlabel{e10.20}{{12}{8}{计算循环神经网络的梯度\relax }{equation.2.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}作为有向图模型的循环网络}{9}{subsection.2.3}}
+\newlabel{e10.29}{{18}{9}{作为有向图模型的循环网络\relax }{equation.2.18}{}}
+\newlabel{e10.30}{{19}{9}{作为有向图模型的循环网络\relax }{equation.2.19}{}}
+\newlabel{e10.31}{{20}{10}{作为有向图模型的循环网络\relax }{equation.2.20}{}}
+\newlabel{e10.32}{{21}{10}{作为有向图模型的循环网络\relax }{equation.2.21}{}}
+\newlabel{e10.33}{{22}{10}{作为有向图模型的循环网络\relax }{equation.2.22}{}}

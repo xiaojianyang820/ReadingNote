@@ -1,0 +1,28 @@
+%!mode::"TeX:UTF-8"
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{listing}
+\usepackage{xcolor}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage[top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm]{geometry}
+\author{右武卫大将军}
+\title{视觉增强学习}
+\begin{document}
+    \maketitle
+    \section{摘要}
+        我们提出一种基于语义层对照片图像进行分解合成的方法。在给定语义标签映射的基础上，该方法可以给出一个符合输入层要求的分解图片。因此该方法实质上就是可以接受关于一个场景的二维语义描述，而生成相应图片的工具。不同于最近的其他一些方法，我们的这个方法并不依赖于对抗性训练。我们要说明的是，图片可以通过一个简单的具有恰当结构的前向网络从语义层进行分解，并且训练的过程是针对特定目标的端对端的训练。这种方法可以无缝测量很好的解析度；我们通过分解2M分辨率的图片来说明这一问题，这一分辨率是训练图片的最大分辨率。在不同的室内或者室外场景下额外感知试验表明这一方法在图片分解上比其他方法具有更强的可用性。
+    \section{介绍}
+        
+    
+\end{document}
