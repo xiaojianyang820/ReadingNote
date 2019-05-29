@@ -1,0 +1,54 @@
+%!mode::"TeX:UTF-8"
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{listing}
+\usepackage{xcolor}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage[top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm]{geometry}
+\author{右武卫大将军}
+\title{概率，随机变量和随机过程（第一章）}
+\begin{document}
+    \maketitle
+    \section{引言}
+        概率论用来研究相继发生或同时发生的大量现象的平均特性。人们观测到，在许多领域中，当观测次数增加时，某些量的平均会趋向于一个常数；即使平均是对试验前特定的任何子序列进行，其值扔保持不变。概率论的母的就是用事件的概率来描述和预测这些平均值。事件$A$的概率是赋予这一事件的一个数$P(A)$，它可以解释为：
+        
+            如果实验重复进行$n$次，事件$A$发生$n_A$次，则当$n$足够大时，A发生的相对概率$n_A/n$以高度的确定性接近$P(A)$:
+            \begin{equation}
+                P(A) \approx n_A/n
+                \label{f1-1}
+            \end{equation}
+            
+        这种解释是不精确的。术语“以高度的把握性”，“接近”，“足够大”的含义都不明确。但是这种不精确是无法避免的，概率论只能以不准确的形式和物理现象相联系。
+    \section{定义}
+        \subsection{公理化定义}
+            概率论中有三个基础性的公理：
+            \begin{enumerate}
+                \item 任一事件$A$的概率$P(A)$是赋予此事件的一个非负实数
+                        $$P(A) \le 0$$
+                \item 必然事件的概率等于1
+                        $$P(S)=1$$
+                \item 如果两个事件$A$和$B$是互斥的，则：
+                        $$P(A\cup B) = P(A) + P(B)$$
+            \end{enumerate}
+        \subsection{相对频率定义}
+            相对频率方法是基于下述定义：一事件的概率$P(A)$是极限
+                \begin{equation}
+                    P(A) = \lim_{n\leftarrow \infty} \frac{n_A}{n}
+                    \label{f1-6}
+                \end{equation}
+            式中$n_A$是A是发生次数，$n$是试验次数。
+                
+        \subsection{古典定义}
+            
+\end{document}

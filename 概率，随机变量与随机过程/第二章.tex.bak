@@ -1,0 +1,24 @@
+%!mode::"TeX:UTF-8"
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{listing}
+\usepackage{xcolor}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage[top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm]{geometry}
+\author{右武卫大将军}
+\title{概率，随机变量和随机过程（第一章）}
+\begin{document}
+    \maketitle
+    
+\end{document}
