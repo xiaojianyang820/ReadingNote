@@ -64,7 +64,7 @@
             在开始数据爬取和清洗之前，很有必要提前了解一下新浪运动社区的基本结构。新浪线上运动社区构成了一个树状结构，有根论坛，有分支论坛，有不再分割的叶子论坛。这里总共有49个子论坛。图\ref{fig_2}展现了该网站的完整树状结构。
             \begin{figure}[hb]
                 \centering
-                \includegraphics[width=0.8\textwidth]{fig_2}
+                \includegraphics[width=1.1\textwidth]{fig_2}
                 \caption{新浪线上运动社区基本结构}
                 \label{fig_2}
             \end{figure}

@@ -1,0 +1,128 @@
+%!mode::"TeX:UTF-8"
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xltxtra}
+\usepackage{mflogo,texnames}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{listing}
+\usepackage{xcolor}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage[top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm]{geometry}
+\newtheorem{Definition}{\hspace{2em}定义}[section]
+\newtheorem{theorem}{\hspace{2em}定理}[section]
+\newtheorem{lemma}{\hspace{2em}引理}[section]
+\newtheorem{Proof}{证明}[section]
+\author{右武卫大将军}
+\title{第四章 随机变量的概念}
+\begin{document}
+    \maketitle
+    \section{引言}
+        随机变量是赋予实验的每一个结果$\xi$的一个数，记为$x(\xi)$。这个数可以是游戏中的收益，随机电源中的电压，一个随机零件的价格或者随机实验中任何我们感兴趣的数量。一个随机变量实质上是定义在实验结果所构成的集合S上的一个函数。
+
+        \subsection{随机变量}
+            给定一个实验，实验的空间为S，S的子集构成的域称作事件，并且赋予这些事件以概率。对实验中的每一个结果$\xi$，指定一个数$x(\xi)$。于是建立了一个定义在集合S上的函数x，它的值域是一个数集。若函数x满足某一些不太苛刻的条件，那么就称这个函数为随机变量。
+            \begin{Definition}  
+                \textbf{随机变量x}  对实验中每一个结果$\xi$指定一个数$x(\xi)$的函数。这一函数必须满足下面两个条件：
+                \begin{itemize}
+                    \item 对于每一个x，集合$\{\textbf{x}\le x\}$是一个事件
+                    \item 事件$\{\textbf{x}=\infty\}$和事件$\{\textbf{x}=-\infty\}$的概率等于零
+                \end{itemize}
+            \end{Definition}
+            第二个条件表明，虽然对一些结果允许$\textbf{x}$取$+\infty$或者$-\infty$，但要求这些结果所构成集合具有零概率。
+       \section{分布函数和密度函数}
+            在集合S中，组成事件$\{X\le x\}$的元素随$x$取值不同而变化。因此，事件$\{X\le x\}$的概率$P\{X\le x\}$是依赖于$x$的一个数。这个数表示为$F_X(x)$并称为它是随机变量$X$的累积分布函数。
+            \begin{Definition}
+                随机变量$X$的\textbf{分布函数}
+                $$
+                    F_X(x) = P\{X\le x\}
+                $$
+                是定义在从$-\infty$到$\infty$上的函数。
+            \end{Definition}
+            \begin{Definition}
+                \textbf{分位点} 一个随机变量$X$的$u$分位点是满足
+                $$
+                    u = P(X\le x_u) = F(x_u)
+                $$
+                的最小实数$x_u$。
+            \end{Definition}
+            因此$x_u$可以看作是函数$u=F_X(x)$的逆变换。该函数的定义域是$[0,1]$，而值域是$R$。
+            \subsubsection{分布函数的性质}
+                在下面的定义中，表示式$F(x^+)$和$F(x^-)$分别表示函数$F(x)$在$x$点的右极限和左极限，即
+                $$
+                    F(x^+) = \lim_{\eta >0,\eta\rightarrow 0} F(x+\eta),\quad F(x^-)=\lim_{\eta >0,\eta\rightarrow 0} F(x-\eta)
+                $$
+                分布函数具有以下性质
+                \begin{itemize}
+                    \item $ F(+\infty) = 1\quad F(-\infty) = 0$
+                    \item 它是$x$的非降函数
+                    \item $P(X > x)=1-F_X(x)$
+                    \item 函数$F(x)$是右连续的，即$F(x^+)=F(x)$
+                    \item $P\{x_1<x\le x_2\}=F(x_2)-F(x_1)$
+                    \item $P(X=x) = F_X(x) - F_X(x^-)$
+                \end{itemize}
+            \subsection{连续型，离散型和混合型随机变量}
+                如果随机变量$X$的分布函数$F_X(x)$是连续的，则称$X$为连续型随机变量。在这种情况下，分布函数是左连续的，这意味着$P(X=x)=0$。
+                
+                如果分布函数是仅有有限多个跳跃型间断点的阶梯型函数，$X$被称作离散型随机变量。
+            \subsection{概率密度函数}
+                一个随机变量的分布函数的导数称为该随机变量的概率密度函数，记为$f_X(x)$，即
+                $$
+                    f_X(x) := \frac{dF_X(x)}{dx}
+                $$
+                从分布函数的单调非减性，概率密度函数满足：
+                $$
+                    f_X(x)\ge 0,\quad \forall x \in R
+                $$
+        \section{常用随机变量}
+            \begin{Definition}
+                \textbf{存在性定理} 
+                
+                如果某一个函数$f(x)$满足以下条件：
+                \begin{itemize}
+                    \item 该函数在定义域$\mathbb{R}$上是非负的
+                    \item 该函数在整个定义域上的积分为1
+                    \item 该函数的积分上限函数$\int_{-\infty}^{x}f(t)dt$是右连续的
+                \end{itemize}
+                那么就一定可以构造一个实验和一个随机变量$X$，使得它的概率密度函数为$f(x)$。
+            \end{Definition}
+            下面简要讨论一些常用的概率密度函数。
+            \subsection{连续型随机变量}
+                \textbf{正态分布} 
+                
+                正态分布或者高斯分布是最常用的分布之一。如果一个随机变量的概率密度函数为：
+                \begin{equation}
+                    f_X(x) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{-(x-\mu)^2/2\sigma^2}
+                \end{equation}
+                该函数对应的是一个钟形曲线，该曲线是关于均值参数$\mu$是对称的，而方差参数$\sigma$控制钟形曲线宽度。
+                高斯分布的分布函数的形式为：
+                \begin{equation}
+                    F_X(x) = \int_{-\infty}^x\frac{1}{\sqrt{2\pi \sigma^2}}e^{-(y-\mu)^2/2\sigma^2}dy:=G(\frac{x-\mu}{\sigma})
+                \end{equation}
+                这里特意引入一个字母来表示标准正态分布的分布函数，即
+                \begin{equation}
+                    G(x) = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}}e^{-y^2/2}dy
+                \end{equation}
+                因为$f_X(x)$仅依赖于两个参数$\mu,\sigma$，故可以将某一个服从正态分布的随机变量$X$记为$X\sim N(\mu,\sigma^2)$。特殊的，当$X\sim N(0,1)$时，该随机变量称为标准正态分布。
+                
+                正态分布是概率论和统计学中最重要的分布之一。多种自然现象服从正态分布，最重要的现象是如果总体误差是由无数个微小误差叠加在一起造成的，那么总体误差服从正态分布。
+                
+                \textbf{指数分布}
+                
+                如果一个随机变量$X$的概率密度函数为：
+                \begin{equation}
+                    f_X(x) = \left\{
+                    \begin{split}
+                        &\lambda e^{-\lambda x} \quad &x\ge 0 \\
+                        &0                            &\text{其他}
+                    \end{split}
+                    \right.
+                \end{equation}
+\end{document}
